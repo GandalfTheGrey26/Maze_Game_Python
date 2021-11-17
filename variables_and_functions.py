@@ -548,19 +548,19 @@ def pHelp():
     font3 = pygame.font.SysFont('Arial', 26)
 
     #load and transform image of player
-    player = pygame.image.load(f'C:/Users/Glenn/Pictures/Saved Pictures/PyGame_Sprites/gunner/CHARACTER_SPRITES/Red/Gunner_Red_Run.png')
+    player = pygame.image.load('Gunner_Red_Run.png')
     player = pygame.transform.smoothscale(player, (1.5*player.get_width(),1.5*player.get_height()))
 
     #load and transform image of coin
-    coin = pygame.image.load(f'C:/Users/Glenn/Pictures/Saved Pictures/PyGame_Sprites/Spinning_Coin.png')
+    coin = pygame.image.load('Spinning_Coin.png')
     coin = pygame.transform.smoothscale(coin, (0.5*coin.get_width(), 0.5*coin.get_height()))
 
     #load and transform image of turret
-    turret = pygame.image.load(f'C:/Users/Glenn/Pictures/Saved Pictures/PyGame_Sprites/Turret.png')
+    turret = pygame.image.load('Turret.png')
     turret = pygame.transform.smoothscale(turret, (3*turret.get_width(), 3*turret.get_height()))
 
     #load and transform image of enemy
-    enemy = pygame.image.load(f'C:/Users/Glenn/Pictures/Saved Pictures/PyGame_Sprites/gunner/CHARACTER_SPRITES/Rainbow/Gunner_Rainbow_Idle.png')
+    enemy = pygame.image.load('Gunner_Rainbow_Idle.png')
     enemy = pygame.transform.smoothscale(enemy, (1.5*enemy.get_width(),1.5*enemy.get_height()))
 
     while True:

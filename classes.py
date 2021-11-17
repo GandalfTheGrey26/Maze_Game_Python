@@ -17,7 +17,7 @@ class MenuSprite:
         self.scale = 1                    #set the scale
         
         #load the sprite sheet and scale it:
-        self.spriteSheet = pygame.image.load(f'C:/Users/Glenn/Pictures/Saved Pictures/PyGame_Sprites/gunner/CHARACTER_SPRITES/{color}/Gunner_{color}_Run.png')
+        self.spriteSheet = pygame.image.load(f'Gunner_{color}_Run.png')
         self.spriteSheet = pygame.transform.smoothscale(self.spriteSheet, (self.scale*self.spriteSheet.get_width(),self.scale*self.spriteSheet.get_height()))
         
         self.rect = [0, 0, 288/6, 48]    #cutout of the sprite sheet
@@ -68,8 +68,8 @@ class Bullet:
         self.othSpritePos = othSpritePos    #set position of the other sprite
         
         #load the images of the 'bullet' and stream
-        self.bulletSprite = pygame.image.load('C:/Users/Glenn/Pictures/Saved Pictures/PyGame_Sprites/gunner/EXTRAS/SpongeBullet.png')
-        self.streamSprite = pygame.image.load('C:/Users/Glenn/Pictures/Saved Pictures/PyGame_Sprites/gunner/EXTRAS/BulletStream.png')
+        self.bulletSprite = pygame.image.load('SpongeBullet.png')
+        self.streamSprite = pygame.image.load('BulletStream.png')
 
     def draw(self):
         if self.bulletPos[0] < 530:
@@ -105,7 +105,7 @@ class Player:
         self.playerPos = [self.squareSize*self.playerCoordinates[0], self.squareSize*self.playerCoordinates[1]]
         
         #load the sprite sheet and transform it:
-        self.spriteSheet = pygame.image.load(f'C:/Users/Glenn/Pictures/Saved Pictures/PyGame_Sprites/gunner/CHARACTER_SPRITES/{playerColor}/Gunner_{playerColor}_Idle.png')
+        self.spriteSheet = pygame.image.load(f'Gunner_{playerColor}_Idle.png')
         self.spriteSheet = pygame.transform.smoothscale(self.spriteSheet, (self.scale*self.spriteSheet.get_width(),self.scale*self.spriteSheet.get_height()))
         
     def drawPlayer(self):
@@ -227,7 +227,7 @@ class Enemy:
         self.enemyPos = [self.squareSize*self.enemyCoordinates[0], self.squareSize*self.enemyCoordinates[1]]
         
         #load and transform the sprite sheet:
-        self.spriteSheet = pygame.image.load(f'C:/Users/Glenn/Pictures/Saved Pictures/PyGame_Sprites/gunner/CHARACTER_SPRITES/{self.enemyColor}/Gunner_{self.enemyColor}_Idle.png')
+        self.spriteSheet = pygame.image.load(f'Gunner_{self.enemyColor}_Idle.png')
         self.spriteSheet = pygame.transform.smoothscale(self.spriteSheet, (self.scale*self.spriteSheet.get_width(),self.scale*self.spriteSheet.get_height()))
 
                                       
@@ -383,7 +383,7 @@ class Coin:
         self.coinPos = [self.squareSize*self.coinCoordinates[0], self.squareSize*self.coinCoordinates[1]]
         
         #load the sprite sheet and transform it
-        self.spriteSheet = pygame.image.load(f'C:/Users/Glenn/Pictures/Saved Pictures/PyGame_Sprites/Spinning_Coin.png')
+        self.spriteSheet = pygame.image.load('Spinning_Coin.png')
         self.spriteSheet = pygame.transform.smoothscale(self.spriteSheet, (self.scale*self.spriteSheet.get_width(),self.scale*self.spriteSheet.get_height()))
     
     def drawCoin(self):
@@ -423,7 +423,7 @@ class Turret:
         self.shooting = False                  #set the turret to not currently shooting
         
         #load the turret sprite sheet:
-        self.spriteSheet = pygame.image.load(f'C:/Users/Glenn/Pictures/Saved Pictures/PyGame_Sprites/Turret.png')
+        self.spriteSheet = pygame.image.load('Turret.png')
 
         if self.direction == 'right':
             #turret is facing right...?
@@ -432,8 +432,8 @@ class Turret:
             self.laserPos=[self.pos[0] - 37, self.pos[1] + 5]    #...set the laser position
 
         #load the images of the laser and stream
-        self.laserSprite = pygame.image.load('C:/Users/Glenn/Pictures/Saved Pictures/PyGame_Sprites/gunner/EXTRAS/SpongeBullet.png')
-        self.streamSprite = pygame.image.load('C:/Users/Glenn/Pictures/Saved Pictures/PyGame_Sprites/gunner/EXTRAS/LaserStream.png')
+        self.laserSprite = pygame.image.load('SpongeBullet.png')
+        self.streamSprite = pygame.image.load('LaserStream.png')
 
     def draw(self):
         '''
